@@ -18,7 +18,6 @@ namespace BaseDeDatos
         private cineContext _context;
         public NuevoPelicula(cineContext context)
         {
-            //nuevo commit
             _context = context;
             InitializeComponent();
             List<Genero> lGeneros = _context.Generos.ToList();
