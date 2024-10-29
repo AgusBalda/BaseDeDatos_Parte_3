@@ -12,7 +12,7 @@ namespace BaseDeDatos
             InitializeComponent();
 
             var optionsBuilder = new DbContextOptionsBuilder<cineContext>();
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-DL1UVDR;Initial Catalog=tp_cine;Integrated Security=True;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer(Properties.Resources.ConnectionString);
 
             _context = new cineContext(optionsBuilder.Options);
         }

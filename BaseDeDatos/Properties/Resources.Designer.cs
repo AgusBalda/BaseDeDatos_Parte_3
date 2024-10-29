@@ -59,5 +59,14 @@ namespace BaseDeDatos.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data Source=tpcine.cn0gmiyiwodt.us-east-2.rds.amazonaws.com,1433;Initial Catalog=tp_cine_bdd;Persist Security Info=True;User ID=admin; Password=Tpcine123;Trust Server Certificate=True.
+        /// </summary>
+        internal static string ConnectionString {
+            get {
+                return ResourceManager.GetString("ConnectionString", resourceCulture);
+            }
+        }
     }
 }
