@@ -17,7 +17,8 @@ namespace BaseDeDatos
     {
         private cineContext _context;
         public NuevoPelicula(cineContext context)
-        {
+        { 
+            // agregar comentario 
             _context = context;
             InitializeComponent();
             List<Genero> lGeneros = _context.Generos.ToList();
