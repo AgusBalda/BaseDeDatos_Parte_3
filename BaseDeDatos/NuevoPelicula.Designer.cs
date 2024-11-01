@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             BtnAgregar = new Button();
             BtnCanselar = new Button();
             textTitulo = new TextBox();
@@ -45,12 +46,13 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)nupDuracion).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // BtnAgregar
             // 
-            BtnAgregar.Enabled = false;
             BtnAgregar.Location = new Point(12, 210);
             BtnAgregar.Name = "BtnAgregar";
             BtnAgregar.Size = new Size(105, 35);
@@ -61,7 +63,7 @@
             // 
             // BtnCanselar
             // 
-            BtnCanselar.Location = new Point(454, 210);
+            BtnCanselar.Location = new Point(484, 210);
             BtnCanselar.Name = "BtnCanselar";
             BtnCanselar.Size = new Size(105, 35);
             BtnCanselar.TabIndex = 1;
@@ -201,11 +203,15 @@
             label7.TabIndex = 17;
             label7.Text = "Idioma";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // NuevoPelicula
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(569, 256);
+            ClientSize = new Size(601, 256);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -225,7 +231,9 @@
             Controls.Add(BtnAgregar);
             Name = "NuevoPelicula";
             Text = "NuevoPelicula";
+            Load += NuevoPelicula_Load;
             ((System.ComponentModel.ISupportInitialize)nupDuracion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,5 +257,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private ErrorProvider errorProvider1;
     }
 }

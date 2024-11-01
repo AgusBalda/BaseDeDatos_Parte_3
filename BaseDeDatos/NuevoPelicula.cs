@@ -17,7 +17,7 @@ namespace BaseDeDatos
     {
         private cineContext _context;
         public NuevoPelicula(cineContext context)
-        { 
+        {
             // agregar comentario 
             _context = context;
             InitializeComponent();
@@ -46,90 +46,116 @@ namespace BaseDeDatos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pelicula nPelicula = new Pelicula();
-            nPelicula.Titulo = textTitulo.Text;
-            nPelicula.FechaEstreno = dtpFechaEstreno.Value;
-            nPelicula.DuracionMin = Convert.ToInt32(nupDuracion.Value);
-            nPelicula.IdGenero = Convert.ToInt32(cboGenero.SelectedValue);
-            nPelicula.IdClasificacion = Convert.ToInt32(cboClasificacion.SelectedValue);
-            nPelicula.IdDirector = Convert.ToInt32(cboDirector.SelectedValue);
-            nPelicula.IdIdioma = Convert.ToInt32(cboIdioma.SelectedValue);
-            _context.Peliculas.Add(nPelicula);
-            if (_context.SaveChanges() == 1)
-            {
-                MessageBox.Show("Pelicula agregada", "AGREGADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+            QuitarErrores();
+
+            if (validar()) 
+            { 
+                Pelicula nPelicula = new Pelicula();
+                nPelicula.Titulo = textTitulo.Text;
+                nPelicula.FechaEstreno = dtpFechaEstreno.Value;
+                nPelicula.DuracionMin = Convert.ToInt32(nupDuracion.Value);
+                nPelicula.IdGenero = Convert.ToInt32(cboGenero.SelectedValue);
+                nPelicula.IdClasificacion = Convert.ToInt32(cboClasificacion.SelectedValue);
+                nPelicula.IdDirector = Convert.ToInt32(cboDirector.SelectedValue);
+                nPelicula.IdIdioma = Convert.ToInt32(cboIdioma.SelectedValue);
+                _context.Peliculas.Add(nPelicula);
+                if (_context.SaveChanges() == 1)
+                {
+                    MessageBox.Show("Pelicula agregada", "AGREGADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Pelicula NO agregada", "NO AGREGADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Pelicula NO agregada", "NO AGREGADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+
+           
 
         }
 
-        private void validar()
+        private bool validar()
         {
             bool flag = true;
             if (textTitulo.Text == string.Empty)
             {
                 flag = false;
+                errorProvider1.SetError(textTitulo,"Debe ingresar un nombre");
             }
             if (nupDuracion.Value == 0)
             {
                 flag = false;
+                errorProvider1.SetError(nupDuracion, "Debe ingresar la duracion de la peli en minutos");
             }
             if (cboGenero.SelectedIndex == -1)
             {
                 flag = false;
+                errorProvider1.SetError(cboGenero, "Debe seleccionar un genero");
             }
             if (cboClasificacion.SelectedIndex == -1)
             {
                 flag = false;
+                errorProvider1.SetError(cboClasificacion, "Elija la calificacion de la peli ");
             }
             if (cboDirector.SelectedIndex == -1)
             {
                 flag = false;
+                errorProvider1.SetError(cboDirector, "Elija el director de la peli");
             }
             if (cboIdioma.SelectedIndex == -1)
             {
                 flag = false;
+                errorProvider1.SetError(cboIdioma, "Elija el idioma de la peli");
             }
-            BtnAgregar.Enabled = flag;
-        }
+            
+            //BtnAgregar.Enabled = flag;
+            return flag;
+            
 
+        }
+        private void QuitarErrores()
+        {
+            errorProvider1.Clear();
+        }
         private void textTitulo_TextChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void nupDuracion_ValueChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void cboGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void cboClasificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void cboDirector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void cboIdioma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            validar();
+            //validar();
         }
 
         private void BtnCanselar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void NuevoPelicula_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
