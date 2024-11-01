@@ -37,7 +37,8 @@ namespace BaseDeDatos
 
         private void funcionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmFuncion funcion = new FrmFuncion(_context);
+            funcion.ShowDialog();
         }
 
         private void integrantesToolStripMenuItem_Click(object sender, EventArgs e)

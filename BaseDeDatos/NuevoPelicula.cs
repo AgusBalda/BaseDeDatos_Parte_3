@@ -26,21 +26,25 @@ namespace BaseDeDatos
             cboGenero.DisplayMember = "Genero1";
             cboGenero.ValueMember = "IdGenero";
             cboGenero.SelectedIndex = -1;
+            cboGenero.DropDownStyle = ComboBoxStyle.DropDownList;
             List<Directore> lDirec = _context.Directores.ToList();
             cboDirector.DataSource = lDirec;
             cboDirector.DisplayMember = "Apellido";
             cboDirector.ValueMember = "IdDirector";
             cboDirector.SelectedIndex = -1;
+            cboDirector.DropDownStyle = ComboBoxStyle.DropDownList;
             List<ClasificacionesEdad> lClas = _context.ClasificacionesEdads.ToList();
             cboClasificacion.DataSource = lClas;
             cboClasificacion.DisplayMember = "Clasificacion";
             cboClasificacion.ValueMember = "IdClasificacion";
             cboClasificacion.SelectedIndex = -1;
+            cboClasificacion.DropDownStyle = ComboBoxStyle.DropDownList;
             List<Idioma> lIdioma = _context.Idiomas.ToList();
             cboIdioma.DataSource = lIdioma;
             cboIdioma.DisplayMember = "Idioma1";
             cboIdioma.ValueMember = "IdIdioma";
             cboIdioma.SelectedIndex = -1;
+            cboIdioma.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
