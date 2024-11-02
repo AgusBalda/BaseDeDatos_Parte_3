@@ -15,8 +15,6 @@ public partial class Funcione
 
     public bool? Subtitulo { get; set; }
 
-    public int? Dia { get; set; }
-
     public int? CodPelicula { get; set; }
 
     public int? IdSala { get; set; }
@@ -24,6 +22,8 @@ public partial class Funcione
     public int? CodPromocion { get; set; }
 
     public int? IdTipoFuncion { get; set; }
+
+    public DateOnly? Dia { get; set; }
 
     public virtual Pelicula CodPeliculaNavigation { get; set; }
 

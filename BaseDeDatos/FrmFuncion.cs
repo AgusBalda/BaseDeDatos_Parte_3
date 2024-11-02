@@ -62,7 +62,7 @@ namespace BaseDeDatos
             if (Validar())
             {
                 Funcione cFunciones = new Funcione();
-                cFunciones.Dia = Convert.ToInt32(txtDia.Text);
+                cFunciones.Dia = DateOnly.FromDateTime(dtpDia.Value);
                 cFunciones.HoraInicio = TimeOnly.FromDateTime(dtphorainicio.Value); //toma solo la hora 
                 cFunciones.Precio = Convert.ToInt32(txtPrecio.Text);
                 cFunciones.CodPelicula = Convert.ToInt32(cboPeli.SelectedValue);
@@ -87,12 +87,12 @@ namespace BaseDeDatos
         private bool Validar()
         {
             bool valid = true;
-            if (txtDia.Text == string.Empty)
-            {
-                valid = false;
-                MessageBox.Show("Ingrese un día", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //if (txtDia.Text == string.Empty)
+            //{
+            //    valid = false;
+            //    MessageBox.Show("Ingrese un día", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
+            //}
             if (txtPrecio.Text == string.Empty)
             {
                 valid = false;

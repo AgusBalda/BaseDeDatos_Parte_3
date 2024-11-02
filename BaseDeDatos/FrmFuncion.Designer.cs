@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             GrbFuncion = new GroupBox();
+            dtpDia = new DateTimePicker();
             label7 = new Label();
             cboPromo = new ComboBox();
             label6 = new Label();
@@ -38,7 +39,6 @@
             label4 = new Label();
             cboPeli = new ComboBox();
             label3 = new Label();
-            txtDia = new TextBox();
             txtPrecio = new TextBox();
             label2 = new Label();
             label1 = new Label();
@@ -50,6 +50,7 @@
             // 
             // GrbFuncion
             // 
+            GrbFuncion.Controls.Add(dtpDia);
             GrbFuncion.Controls.Add(label7);
             GrbFuncion.Controls.Add(cboPromo);
             GrbFuncion.Controls.Add(label6);
@@ -59,7 +60,6 @@
             GrbFuncion.Controls.Add(label4);
             GrbFuncion.Controls.Add(cboPeli);
             GrbFuncion.Controls.Add(label3);
-            GrbFuncion.Controls.Add(txtDia);
             GrbFuncion.Controls.Add(txtPrecio);
             GrbFuncion.Controls.Add(label2);
             GrbFuncion.Controls.Add(label1);
@@ -70,6 +70,15 @@
             GrbFuncion.TabIndex = 0;
             GrbFuncion.TabStop = false;
             GrbFuncion.Text = "Funcion";
+            // 
+            // dtpDia
+            // 
+            dtpDia.Format = DateTimePickerFormat.Short;
+            dtpDia.Location = new Point(95, 49);
+            dtpDia.MinDate = new DateTime(2024, 11, 2, 0, 0, 0, 0);
+            dtpDia.Name = "dtpDia";
+            dtpDia.Size = new Size(101, 23);
+            dtpDia.TabIndex = 14;
             // 
             // label7
             // 
@@ -148,13 +157,6 @@
             label3.TabIndex = 5;
             label3.Text = "Dia Funcion";
             // 
-            // txtDia
-            // 
-            txtDia.Location = new Point(95, 47);
-            txtDia.Name = "txtDia";
-            txtDia.Size = new Size(101, 23);
-            txtDia.TabIndex = 4;
-            // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(95, 106);
@@ -182,6 +184,7 @@
             // 
             // dtphorainicio
             // 
+            dtphorainicio.Format = DateTimePickerFormat.Time;
             dtphorainicio.Location = new Point(95, 76);
             dtphorainicio.Name = "dtphorainicio";
             dtphorainicio.Size = new Size(101, 23);
@@ -232,7 +235,6 @@
         private Label label2;
         private Label label1;
         private TextBox txtPrecio;
-        private TextBox txtDia;
         private Label label3;
         private ComboBox cboPeli;
         private Label label4;
@@ -242,5 +244,6 @@
         private ComboBox cboFuncion;
         private Label label7;
         private ComboBox cboPromo;
+        private DateTimePicker dtpDia;
     }
 }

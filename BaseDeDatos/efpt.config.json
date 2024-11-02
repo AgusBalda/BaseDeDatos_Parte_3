@@ -77,6 +77,10 @@
       {
          "Name": "[dbo].[Transacciones]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[horarios_populares]",
+         "ObjectType": 1
       }
    ],
    "UiHint": null,

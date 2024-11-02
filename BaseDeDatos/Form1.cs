@@ -51,5 +51,11 @@ namespace BaseDeDatos
             NuevoPelicula pelicula = new NuevoPelicula(_context);
             pelicula.ShowDialog();
         }
+
+        private void horarioMasPopularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaHorariosP ConsultaHorarios = new FrmConsultaHorariosP(_context);
+            ConsultaHorarios.ShowDialog();
+        }
     }
 }

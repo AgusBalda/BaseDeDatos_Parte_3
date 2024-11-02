@@ -62,14 +62,14 @@
             // funcionToolStripMenuItem
             // 
             funcionToolStripMenuItem.Name = "funcionToolStripMenuItem";
-            funcionToolStripMenuItem.Size = new Size(180, 22);
+            funcionToolStripMenuItem.Size = new Size(117, 22);
             funcionToolStripMenuItem.Text = "Funcion";
             funcionToolStripMenuItem.Click += funcionToolStripMenuItem_Click;
             // 
             // peliculaToolStripMenuItem
             // 
             peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
-            peliculaToolStripMenuItem.Size = new Size(180, 22);
+            peliculaToolStripMenuItem.Size = new Size(117, 22);
             peliculaToolStripMenuItem.Text = "Pelicula";
             peliculaToolStripMenuItem.Click += peliculaToolStripMenuItem_Click;
             // 
@@ -91,6 +91,7 @@
             horarioMasPopularToolStripMenuItem.Name = "horarioMasPopularToolStripMenuItem";
             horarioMasPopularToolStripMenuItem.Size = new Size(199, 22);
             horarioMasPopularToolStripMenuItem.Text = "Horario mas popular";
+            horarioMasPopularToolStripMenuItem.Click += horarioMasPopularToolStripMenuItem_Click;
             // 
             // reservasCanceladasToolStripMenuItem
             // 
