@@ -48,7 +48,7 @@
             // 
             // btnConsultar
             // 
-            btnConsultar.Location = new Point(378, 47);
+            btnConsultar.Location = new Point(495, 47);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(75, 23);
             btnConsultar.TabIndex = 4;
@@ -61,7 +61,7 @@
             dgvhorarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvhorarios.Location = new Point(12, 76);
             dgvhorarios.Name = "dgvhorarios";
-            dgvhorarios.Size = new Size(441, 236);
+            dgvhorarios.Size = new Size(558, 293);
             dgvhorarios.TabIndex = 5;
             // 
             // cbAno
@@ -101,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(582, 381);
             Controls.Add(cbDia);
             Controls.Add(cbMes);
             Controls.Add(cbAno);

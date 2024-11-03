@@ -97,7 +97,8 @@
             // 
             reservasCanceladasToolStripMenuItem.Name = "reservasCanceladasToolStripMenuItem";
             reservasCanceladasToolStripMenuItem.Size = new Size(199, 22);
-            reservasCanceladasToolStripMenuItem.Text = "Reservas canceladas";
+            reservasCanceladasToolStripMenuItem.Text = "Asientos Populares";
+            reservasCanceladasToolStripMenuItem.Click += reservasCanceladasToolStripMenuItem_Click;
             // 
             // generosMasPopularesToolStripMenuItem
             // 

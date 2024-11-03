@@ -13,6 +13,7 @@ namespace BaseDeDatos.Models
 {
     public partial interface IcineContextProcedures
     {
+        Task<List<asientos_popularesResult>> asientos_popularesAsync(int? idSala, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<horarios_popularesResult>> horarios_popularesAsync(string Tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
     }
 }

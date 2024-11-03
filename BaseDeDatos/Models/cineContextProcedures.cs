@@ -43,6 +43,32 @@ namespace BaseDeDatos.Models
             _context = context;
         }
 
+        public virtual async Task<List<asientos_popularesResult>> asientos_popularesAsync(int? idSala, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "idSala",
+                    Value = idSala ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<asientos_popularesResult>("EXEC @returnValue = [dbo].[asientos_populares] @idSala = @idSala", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<horarios_popularesResult>> horarios_popularesAsync(string Tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter

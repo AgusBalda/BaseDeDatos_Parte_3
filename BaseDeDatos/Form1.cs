@@ -57,5 +57,11 @@ namespace BaseDeDatos
             FrmConsultaHorariosP ConsultaHorarios = new FrmConsultaHorariosP(_context);
             ConsultaHorarios.ShowDialog();
         }
+
+        private void reservasCanceladasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSalas salas = new FrmSalas(_context);
+            salas.ShowDialog();
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace BaseDeDatos.Models
 {
     public partial class horarios_popularesResult
     {
-        public int Dia { get; set; }
+        public int? Dia { get; set; }
         public TimeOnly? hora_inicio { get; set; }
         public int? Compras { get; set; }
         [Column("Ganancias", TypeName = "decimal(38,6)")]
