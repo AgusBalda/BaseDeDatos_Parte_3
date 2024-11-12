@@ -83,33 +83,35 @@
             // clientesMasFrecuentesToolStripMenuItem
             // 
             clientesMasFrecuentesToolStripMenuItem.Name = "clientesMasFrecuentesToolStripMenuItem";
-            clientesMasFrecuentesToolStripMenuItem.Size = new Size(199, 22);
+            clientesMasFrecuentesToolStripMenuItem.Size = new Size(200, 22);
             clientesMasFrecuentesToolStripMenuItem.Text = "Clientes mas frecuentes";
+            clientesMasFrecuentesToolStripMenuItem.Click += clientesMasFrecuentesToolStripMenuItem_Click;
             // 
             // horarioMasPopularToolStripMenuItem
             // 
             horarioMasPopularToolStripMenuItem.Name = "horarioMasPopularToolStripMenuItem";
-            horarioMasPopularToolStripMenuItem.Size = new Size(199, 22);
+            horarioMasPopularToolStripMenuItem.Size = new Size(200, 22);
             horarioMasPopularToolStripMenuItem.Text = "Horario mas popular";
             horarioMasPopularToolStripMenuItem.Click += horarioMasPopularToolStripMenuItem_Click;
             // 
             // reservasCanceladasToolStripMenuItem
             // 
             reservasCanceladasToolStripMenuItem.Name = "reservasCanceladasToolStripMenuItem";
-            reservasCanceladasToolStripMenuItem.Size = new Size(199, 22);
+            reservasCanceladasToolStripMenuItem.Size = new Size(200, 22);
             reservasCanceladasToolStripMenuItem.Text = "Asientos Populares";
             reservasCanceladasToolStripMenuItem.Click += reservasCanceladasToolStripMenuItem_Click;
             // 
             // generosMasPopularesToolStripMenuItem
             // 
             generosMasPopularesToolStripMenuItem.Name = "generosMasPopularesToolStripMenuItem";
-            generosMasPopularesToolStripMenuItem.Size = new Size(199, 22);
-            generosMasPopularesToolStripMenuItem.Text = "Generos mas populares";
+            generosMasPopularesToolStripMenuItem.Size = new Size(200, 22);
+            generosMasPopularesToolStripMenuItem.Text = "Peliculas mas populares";
+            generosMasPopularesToolStripMenuItem.Click += generosMasPopularesToolStripMenuItem_Click;
             // 
             // gananciasXDiaToolStripMenuItem
             // 
             gananciasXDiaToolStripMenuItem.Name = "gananciasXDiaToolStripMenuItem";
-            gananciasXDiaToolStripMenuItem.Size = new Size(199, 22);
+            gananciasXDiaToolStripMenuItem.Size = new Size(200, 22);
             gananciasXDiaToolStripMenuItem.Text = "Ganancias x dia";
             // 
             // integrantesToolStripMenuItem

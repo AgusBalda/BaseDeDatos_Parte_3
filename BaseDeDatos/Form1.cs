@@ -63,5 +63,17 @@ namespace BaseDeDatos
             FrmSalas salas = new FrmSalas(_context);
             salas.ShowDialog();
         }
+
+        private void clientesMasFrecuentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientesFrecuentes CF = new FrmClientesFrecuentes();
+            CF.ShowDialog();
+        }
+
+        private void generosMasPopularesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClasificacionesPopulares cp = new FrmClasificacionesPopulares();
+            cp.ShowDialog();
+        }
     }
 }
