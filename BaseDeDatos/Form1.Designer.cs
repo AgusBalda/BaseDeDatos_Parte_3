@@ -113,6 +113,7 @@
             gananciasXDiaToolStripMenuItem.Name = "gananciasXDiaToolStripMenuItem";
             gananciasXDiaToolStripMenuItem.Size = new Size(200, 22);
             gananciasXDiaToolStripMenuItem.Text = "Ganancias x dia";
+            gananciasXDiaToolStripMenuItem.Click += gananciasXDiaToolStripMenuItem_Click;
             // 
             // integrantesToolStripMenuItem
             // 

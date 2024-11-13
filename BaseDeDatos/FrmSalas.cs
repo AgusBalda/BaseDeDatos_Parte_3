@@ -348,20 +348,20 @@ namespace BaseDeDatos
             List<asientos_popularesResult> listT = await _dbcontext.Procedures.asientos_popularesAsync(id);
             foreach (asientos_popularesResult t in listT)
             {
-                string name  = "a" + t.fila.ToString() + t.numero.ToString();
+                string name = "a" + t.fila.ToString() + t.numero.ToString();
                 var label = this.Controls.Find(name, true).FirstOrDefault() as Label;
 
-                if(label != null)
+                if (label != null)
                 {
-                    if(t.count == 1)
+                    if (t.count == 1)
                     {
                         label.BackColor = Color.LightCoral;
                     }
-                    else if(t.count == 2)
+                    else if (t.count == 2)
                     {
                         label.BackColor = Color.Firebrick;
                     }
-                    else if(t.count == 3)
+                    else if (t.count == 3)
                     {
                         label.BackColor = Color.Maroon;
                     }
@@ -369,6 +369,9 @@ namespace BaseDeDatos
             }
         }
 
+        private void FrmSalas_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

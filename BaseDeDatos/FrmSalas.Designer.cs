@@ -629,6 +629,7 @@
             Controls.Add(label1);
             Name = "FrmSalas";
             Text = "FrmSalas";
+            Load += FrmSalas_Load;
             sala.ResumeLayout(false);
             sala.PerformLayout();
             ResumeLayout(false);

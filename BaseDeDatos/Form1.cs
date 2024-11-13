@@ -75,5 +75,11 @@ namespace BaseDeDatos
             FrmClasificacionesPopulares cp = new FrmClasificacionesPopulares();
             cp.ShowDialog();
         }
+
+        private void gananciasXDiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGananciaxdia gxd=new FrmGananciaxdia();
+            gxd.ShowDialog();
+        }
     }
 }
