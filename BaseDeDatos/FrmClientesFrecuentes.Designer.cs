@@ -103,6 +103,8 @@
             // 
             // dgvConsultar
             // 
+            dgvConsultar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvConsultar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvConsultar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvConsultar.Location = new Point(62, 79);
             dgvConsultar.Name = "dgvConsultar";

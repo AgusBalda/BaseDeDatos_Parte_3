@@ -58,6 +58,8 @@
             // 
             // dgvhorarios
             // 
+            dgvhorarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvhorarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvhorarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvhorarios.Location = new Point(12, 76);
             dgvhorarios.Name = "dgvhorarios";
