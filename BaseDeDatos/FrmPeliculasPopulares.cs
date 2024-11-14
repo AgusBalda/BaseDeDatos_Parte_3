@@ -23,7 +23,7 @@ namespace BaseDeDatos
         }
         private void FrmClasificacionesPopulares_Load(object sender, EventArgs e)
         {
-            chkATP.Checked = true;
+            chkTodas.Checked = true;
         }
         public void CargarGrilla(string consultaSQL)
         {
@@ -55,6 +55,16 @@ namespace BaseDeDatos
                 CargarGrilla(consultaSQL);
                 MessageBox.Show("No hay registros", "Consulta Por +21", MessageBoxButtons.OK);
             }
+
+            else if (chkATP.Checked == false && chk13.Checked == false && chk18.Checked == false && chk21.Checked == false && chkTodas.Checked == false)
+            {
+                MessageBox.Show("Debe activar una clasificacion por favor!!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (chkTodas.Checked)
+            {
+                string consultaSQL = "SELECT p.titulo AS Pelicula, COUNT(t.id_ticket) 'Tickets Vendidos'\r\nFROM Peliculas p JOIN Funciones f ON p.cod_pelicula = f.cod_pelicula\r\nJOIN Tickets t ON f.cod_funcion = t.cod_funcion JOIN Clasificaciones_edad c ON p.id_clasificacion = c.id_clasificacion\r\nGROUP BY p.titulo \r\nORDER BY 'Tickets Vendidos' DESC";
+                CargarGrilla(consultaSQL);
+            }
         }
 
         private void chkATP_CheckedChanged(object sender, EventArgs e)
@@ -64,6 +74,7 @@ namespace BaseDeDatos
                 chk21.Checked = false;
                 chk18.Checked = false;
                 chk13.Checked = false;
+                chkTodas.Checked = false;
             }
         }
 
@@ -74,6 +85,7 @@ namespace BaseDeDatos
                 chk21.Checked = false;
                 chk18.Checked = false;
                 chkATP.Checked = false;
+                chkTodas.Checked = false;
             }
         }
 
@@ -84,6 +96,7 @@ namespace BaseDeDatos
                 chk21.Checked = false;
                 chkATP.Checked = false;
                 chk13.Checked = false;
+                chkTodas.Checked = false;
             }
         }
 
@@ -94,6 +107,25 @@ namespace BaseDeDatos
                 chkATP.Checked = false;
                 chk18.Checked = false;
                 chk13.Checked = false;
+                chkTodas.Checked=false;
+            }
+        }
+
+
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkTodas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodas.Checked)
+            {
+                chk21.Checked = false;
+                chkATP.Checked = false;
+                chk13.Checked = false;
+                chk18.Checked = false;
             }
         }
     }

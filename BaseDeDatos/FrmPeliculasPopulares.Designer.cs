@@ -39,6 +39,8 @@
             chk13 = new CheckBox();
             chk18 = new CheckBox();
             chk21 = new CheckBox();
+            label1 = new Label();
+            chkTodas = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dgvConsultar).BeginInit();
             SuspendLayout();
             // 
@@ -78,17 +80,18 @@
             // 
             lbl1.AutoSize = true;
             lbl1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl1.Location = new Point(29, 85);
+            lbl1.Location = new Point(97, 85);
             lbl1.Name = "lbl1";
             lbl1.Size = new Size(31, 17);
             lbl1.TabIndex = 9;
             lbl1.Text = "ATP";
+            lbl1.Click += lbl1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(115, 84);
+            label2.Location = new Point(168, 85);
             label2.Name = "label2";
             label2.Size = new Size(29, 17);
             label2.TabIndex = 10;
@@ -98,7 +101,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(203, 84);
+            label3.Location = new Point(228, 85);
             label3.Name = "label3";
             label3.Size = new Size(29, 17);
             label3.TabIndex = 11;
@@ -108,7 +111,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(293, 84);
+            label4.Location = new Point(297, 85);
             label4.Name = "label4";
             label4.Size = new Size(29, 17);
             label4.TabIndex = 12;
@@ -117,7 +120,7 @@
             // chkATP
             // 
             chkATP.AutoSize = true;
-            chkATP.Location = new Point(67, 88);
+            chkATP.Location = new Point(135, 88);
             chkATP.Name = "chkATP";
             chkATP.Size = new Size(15, 14);
             chkATP.TabIndex = 13;
@@ -127,7 +130,7 @@
             // chk13
             // 
             chk13.AutoSize = true;
-            chk13.Location = new Point(154, 88);
+            chk13.Location = new Point(203, 88);
             chk13.Name = "chk13";
             chk13.Size = new Size(15, 14);
             chk13.TabIndex = 14;
@@ -137,7 +140,7 @@
             // chk18
             // 
             chk18.AutoSize = true;
-            chk18.Location = new Point(242, 87);
+            chk18.Location = new Point(263, 88);
             chk18.Name = "chk18";
             chk18.Size = new Size(15, 14);
             chk18.TabIndex = 15;
@@ -154,11 +157,33 @@
             chk21.UseVisualStyleBackColor = true;
             chk21.CheckedChanged += chk21_CheckedChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 85);
+            label1.Name = "label1";
+            label1.Size = new Size(43, 17);
+            label1.TabIndex = 17;
+            label1.Text = "Todas";
+            // 
+            // chkTodas
+            // 
+            chkTodas.AutoSize = true;
+            chkTodas.Location = new Point(61, 88);
+            chkTodas.Name = "chkTodas";
+            chkTodas.Size = new Size(15, 14);
+            chkTodas.TabIndex = 18;
+            chkTodas.UseVisualStyleBackColor = true;
+            chkTodas.CheckedChanged += chkTodas_CheckedChanged;
+            // 
             // FrmClasificacionesPopulares
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(394, 361);
+            Controls.Add(chkTodas);
+            Controls.Add(label1);
             Controls.Add(chk21);
             Controls.Add(chk18);
             Controls.Add(chk13);
@@ -191,5 +216,7 @@
         private CheckBox chk13;
         private CheckBox chk18;
         private CheckBox chk21;
+        private Label label1;
+        private CheckBox chkTodas;
     }
 }
